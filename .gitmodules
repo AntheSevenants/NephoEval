@@ -1,0 +1,3 @@
+[submodule "NephoNeural"]
+	path = NephoNeural
+	url = https://github.com/AntheSevenants/NephoNeural
