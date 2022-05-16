@@ -29,7 +29,7 @@ class CountMatrixProcessor(MatrixProcessor):
                 pipeline = Pipeline(temp_path)
         
                 if do_reduce:
-                    pipeline.reduce(dim_tsne)
+                    pipeline.reduce(do_reduce)
             
                 pipeline.compute_distance_matrix()
             
