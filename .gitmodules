@@ -1,3 +1,6 @@
 [submodule "NephoNeural"]
 	path = NephoNeural
 	url = https://github.com/AntheSevenants/NephoNeural
+[submodule "tokenclouds"]
+	path = tokenclouds
+	url = https://github.com/QLVL/tokenclouds
