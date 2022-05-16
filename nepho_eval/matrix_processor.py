@@ -12,7 +12,7 @@ class MatrixProcessor:
         self.TSV_PATH = TSV_PATH
         self.MATRICES_PATH = MATRICES_PATH
         
-    def create_filename(original_filename, lemma, suffix="", extension="npy"):
+    def create_filename(self, original_filename, lemma, suffix="", extension="npy"):
         filename_no_ext = Path(original_filename).stem
         folder = f"{self.MATRICES_PATH}/{lemma}"
         
