@@ -8,6 +8,10 @@ import pandas as pd
 import shutil
 
 class CountMatrixProcessor(MatrixProcessor):
+    def __init__(self, LEMMAS_PATH, TSV_PATH, TEMP_PATH, MATRICES_PATH):
+        super().__init__(LEMMAS_PATH, TSV_PATH, MATRICES_PATH)
+        self.TEMP_PATH = TEMP_PATH
+    
     def process(self, do_reduce=False):
         for lemma in tqdm(self.lemmas):
             models = list(pd.read_csv(f"{TSV_PATH}/{lemma}/{lemma}.models.tsv", sep="\t")["_model"])
