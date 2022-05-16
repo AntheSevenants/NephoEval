@@ -7,7 +7,7 @@ import pandas as pd
 import shutil
 
 class CountMatrixProcessor(MatrixProcessor):
-    def __init__(self, LEMMAS_PATH, TSV_PATH, TEMP_PATH, MATRICES_PATH):
+    def __init__(self, LEMMAS_PATH, TSV_PATH, MATRICES_PATH, TEMP_PATH):
         super().__init__(LEMMAS_PATH, TSV_PATH, MATRICES_PATH)
         self.TEMP_PATH = TEMP_PATH
     
