@@ -13,14 +13,14 @@ class CountMatrixProcessor(MatrixProcessor):
     
     def process(self, do_reduce=False):
         for lemma in tqdm(self.lemmas):
-            models = list(pd.read_csv(f"{TSV_PATH}/{lemma}/{lemma}.models.tsv", sep="\t")["_model"])
+            models = list(pd.read_csv(f"{self.TSV_PATH}/{lemma}/{lemma}.models.tsv", sep="\t")["_model"])
     
             for model in tqdm(models, leave=False):
                 prefix = f"{self.LEMMAS_PATH}/{lemma}/"
                 filename = f"{model}.tcmx.soc.pac"
         
                 archive_path = f"{prefix}{filename}"
-                temp_path = f"{TEMP_PATH}{filename}"
+                temp_path = f"{self.TEMP_PATH}{filename}"
             
                 # Copy to temp first (I don't have permissions)
                 shutil.copyfile(archive_path, temp_path)

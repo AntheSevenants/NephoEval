@@ -7,7 +7,7 @@ import pandas as pd
 class CountMatrixProcessor(MatrixProcessor):
     def process(self, do_reduce=False):
         for lemma in tqdm(self.lemmas):
-            models = list(pd.read_csv(f"{TSV_PATH}/{lemma}/{lemma}.models.tsv", sep="\t")["_model"])
+            models = list(pd.read_csv(f"{self.TSV_PATH}/{lemma}/{lemma}.models.tsv", sep="\t")["_model"])
     
             for model in tqdm(models, leave=False):
                 prefix = f"{self.LEMMAS_PATH}/{lemma}/"
