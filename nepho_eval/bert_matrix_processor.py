@@ -28,13 +28,13 @@ class CountMatrixProcessor(MatrixProcessor):
                 pipeline.compute_distance_matrix()
             
                 # Save the matrix in its entirety
-                pipeline.save_matrix(create_filename(filename, lemma, suffix="soc"))
+                pipeline.save_matrix(self.create_filename(filename, lemma, suffix="soc"))
         
                 # Save the distance matrix
-                pipeline.save_distance_matrix(create_filename(filename, lemma, suffix="dist"))
+                pipeline.save_distance_matrix(self.create_filename(filename, lemma, suffix="dist"))
         
                 # Save token ids
-                pipeline.save_token_ids(create_filename(filename,
-                                                        lemma,
-                                                        suffix="ids",
-                                                        extension="tsv"))
+                pipeline.save_token_ids(self.create_filename(filename,
+                                                            lemma,
+                                                            suffix="ids",
+                                                            extension="tsv"))
