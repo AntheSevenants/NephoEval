@@ -104,7 +104,3 @@ bert_processor.process(do_reduce=DimTsne("tsne30"), do_transform=True)
 | --------- | ------- | ------------------------------------------------ | -------| 
 | `do_reduce`=`False` | bool/[nepho_nn.DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) | the dimension reduction technique to apply to the distance matrix (False=none) | `DimTsne("tsne30")` |
 | `do_transform`=`False` | bool| whether to apply [ranked log transformation]((https://cloudspotting.marianamontes.me/workflow.html#cosine)) to the distance matrix | `True` |
-
-## Future work
-
-- support [transformed distance matrices](https://cloudspotting.marianamontes.me/workflow.html#cosine)
