@@ -4,6 +4,7 @@ from tqdm.auto import tqdm
 
 import pandas as pd
 
+import os
 import shutil
 
 class CountMatrixProcessor(MatrixProcessor):
@@ -44,3 +45,6 @@ class CountMatrixProcessor(MatrixProcessor):
                                                             lemma,
                                                             suffix="ids",
                                                             extension="tsv"))
+                
+                # Remove the temp file
+                os.remove(temp_path)
