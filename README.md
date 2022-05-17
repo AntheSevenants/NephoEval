@@ -61,7 +61,20 @@ This section describes how to generate distance matrices for neural models.
 
 #### Exporting token-by-feature matrices using NephoNeural
 
-TODO when NephoNeural is updated
+See the [NephoNeural documentation](https://github.com/AntheSevenants/NephoNeural#export-token-by-feature-matrices-hidden-states) on exporting hidden states. Keep in mind that the final structure should look as follows:
+- matrices directory root
+    - lemma1
+        - model1.npy
+        - model2.npy
+        - ...
+    - lemma2
+        - model1.npy
+        - model2.npy
+        - ...
+    - lemma3
+        - model1.npy
+        - model2.npy
+        - ...
 
 ### Processing the token-by-feature matrices
 
