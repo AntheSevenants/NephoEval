@@ -37,10 +37,10 @@ count_processor = CountMatrixProcessor("~/tokens/",
 
 | parameter | type    | description                                      | example |
 | --------- | ------- | ------------------------------------------------ | -------| 
-| `LEMMAS_PATH` | str | the path to the directory containing all token-by-feature matrices | "~/tokens/" |
-| `TSV_PATH` | str | the path to the directory containing your NephoVis dataset | "tokenclouds/data" |
-| `MATRICES_PATH` | str | the path to the directory where your token-by-feature matrices *and* distance matrices will be saved| "~/matrices" |
-| `TEMP_PATH`| str | the path where all pac files will be copied to temporarily | "/temp" |
+| `LEMMAS_PATH` | str | the path to the directory containing all token-by-feature matrices | `"~/tokens/"` |
+| `TSV_PATH` | str | the path to the directory containing your NephoVis dataset | `"tokenclouds/data"` |
+| `MATRICES_PATH` | str | the path to the directory where your token-by-feature matrices *and* distance matrices will be saved| `"~/matrices"` |
+| `TEMP_PATH`| str | the path where all pac files will be copied to temporarily | `"/temp"` |
 
 I had to copy the token-by-feature matrices to TEMP_PATH since I did not have write access on the research group's server.
 
@@ -88,9 +88,9 @@ bert_processor = BertMatrixProcessor("~/bert_tokens/",
 
 | parameter | type    | description                                      | example |
 | --------- | ------- | ------------------------------------------------ | -------| 
-| `LEMMAS_PATH` | str | the path to the directory containing all token-by-feature matrices | "~/bert_tokens/" |
-| `TSV_PATH` | str | the path to the directory containing your NephoVis dataset | "tokenclouds_bert/data" |
-| `MATRICES_PATH` | str | the path to the directory where your token-by-feature matrices *and* distance matrices will be saved| "~/bert_matrices" |
+| `LEMMAS_PATH` | str | the path to the directory containing all token-by-feature matrices | `"~/bert_tokens/"` |
+| `TSV_PATH` | str | the path to the directory containing your NephoVis dataset | `"tokenclouds_bert/data"` |
+| `MATRICES_PATH` | str | the path to the directory where your token-by-feature matrices *and* distance matrices will be saved| `"~/bert_matrices"` |
 
 After the BertMatrixProcessor has been initialised, you can process your token-by-feature matrices as follows. You can specifcy a [NephoNeural DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) to apply to the distance matrix.
 ```python
