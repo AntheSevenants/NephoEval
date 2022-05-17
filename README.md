@@ -54,7 +54,7 @@ count_processor.process(do_reduce=DimTsne("tsne30"), do_transform=True)
 | parameter | type    | description                                      | example |
 | --------- | ------- | ------------------------------------------------ | -------| 
 | `do_reduce`=`False` | bool/[nepho_nn.DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) | the dimension reduction technique to apply to the distance matrix (False=none) | `DimTsne("tsne30")` |
-| `do_transform`=`False` | bool| whether to apply [ranked log transformation]((https://cloudspotting.marianamontes.me/workflow.html#cosine)) to the distance matrix | `True` |
+| `do_transform`=`False` | bool| whether to apply [ranked log transformation](https://cloudspotting.marianamontes.me/workflow.html#cosine) to the distance matrix | `True` |
 
 ### Neural models
 
@@ -103,4 +103,4 @@ bert_processor.process(do_reduce=DimTsne("tsne30"), do_transform=True)
 | parameter | type    | description                                      | example |
 | --------- | ------- | ------------------------------------------------ | -------| 
 | `do_reduce`=`False` | bool/[nepho_nn.DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) | the dimension reduction technique to apply to the distance matrix (False=none) | `DimTsne("tsne30")` |
-| `do_transform`=`False` | bool| whether to apply [ranked log transformation]((https://cloudspotting.marianamontes.me/workflow.html#cosine)) to the distance matrix | `True` |
+| `do_transform`=`False` | bool| whether to apply [ranked log transformation](https://cloudspotting.marianamontes.me/workflow.html#cosine) to the distance matrix | `True` |
