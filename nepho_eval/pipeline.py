@@ -28,10 +28,10 @@ class Pipeline:
         self.distance_matrix = pairwise_distances(matrix, metric="cosine")
         
     def save_matrix(self, filename):
-        np.save(filename, self.soc_matrix)
+        np.save(filename, self.soc_matrix.astype(np.float64))
     
     def save_distance_matrix(self, filename):
-        np.save(filename, self.distance_matrix)
+        np.save(filename, self.distance_matrix.astype(np.float64))
         
     def save_token_ids(self, filename):
         data = { "_id": self.token_ids }
