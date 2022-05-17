@@ -2,6 +2,7 @@ import json
 import numpy as np
 import pandas as pd
 from sklearn.metrics import pairwise_distances
+import scipy.stats
 from nephosem import TypeTokenMatrix
 
 class Pipeline:
@@ -26,6 +27,15 @@ class Pipeline:
     def compute_distance_matrix(self):
         matrix = self.reduced_soc_matrix if self.reduced_soc_matrix is not None else self.soc_matrix
         self.distance_matrix = pairwise_distances(matrix, metric="cosine")
+        
+    def log_transform(self):
+        ranks = scipy.stats.rankdata(self.distance_matrix)
+    
+        transform_func = lambda rank: np.log(1 + np.log(rank))
+        transform_func = np.vectorize(transform_func)
+    
+        transformed_vector = transform_func(ranks)
+        self.distance_matrix = transformed_vector
         
     def save_matrix(self, filename):
         np.save(filename, self.soc_matrix.astype(np.float64))
