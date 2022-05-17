@@ -46,14 +46,15 @@ I had to copy the token-by-feature matrices to TEMP_PATH since I did not have wr
 
 After the CountMatrixProcessor has been initialised, you can process your token-by-feature matrices as follows. You can specifcy a [NephoNeural DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) to apply to the distance matrix.
 ```python
-count_processor.process(do_reduce=False)
+count_processor.process(do_reduce=False, do_transform=False)
 # or
-count_processor.process(do_reduce=DimTsne("tsne30"))
+count_processor.process(do_reduce=DimTsne("tsne30"), do_transform=True)
 ```
 
 | parameter | type    | description                                      | example |
 | --------- | ------- | ------------------------------------------------ | -------| 
 | `do_reduce`=`False` | bool/[nepho_nn.DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) | the dimension reduction technique to apply to the distance matrix (False=none) | `DimTsne("tsne30")` |
+| `do_transform`=`False` | bool| whether to apply [ranked log transformation]((https://cloudspotting.marianamontes.me/workflow.html#cosine)) to the distance matrix | `True` |
 
 ### Neural models
 
@@ -94,14 +95,15 @@ bert_processor = BertMatrixProcessor("~/bert_tokens/",
 
 After the BertMatrixProcessor has been initialised, you can process your token-by-feature matrices as follows. You can specifcy a [NephoNeural DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) to apply to the distance matrix.
 ```python
-bert_processor.process(do_reduce=False)
+bert_processor.process(do_reduce=False, do_transform=False)
 # or
-bert_processor.process(do_reduce=DimTsne("tsne30"))
+bert_processor.process(do_reduce=DimTsne("tsne30"), do_transform=True)
 ```
 
 | parameter | type    | description                                      | example |
 | --------- | ------- | ------------------------------------------------ | -------| 
 | `do_reduce`=`False` | bool/[nepho_nn.DimensionReductionTechnique](https://github.com/AntheSevenants/NephoNeural/blob/main/nepho_nn/dimension_reduction_technique.py) | the dimension reduction technique to apply to the distance matrix (False=none) | `DimTsne("tsne30")` |
+| `do_transform`=`False` | bool| whether to apply [ranked log transformation]((https://cloudspotting.marianamontes.me/workflow.html#cosine)) to the distance matrix | `True` |
 
 ## Future work
 
